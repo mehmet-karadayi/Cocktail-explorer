@@ -1,0 +1,47 @@
+<!doctype html>
+<htlm>
+
+<head>
+<style>
+#cocktails {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#cocktails td, #cocktails th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cocktails tr:nth-child(even){background-color: #f2f2f2;}
+
+#cocktails tr:hover {background-color: #ddd;}
+
+#cocktails th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #896FFF;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+<table id="cocktails">
+<tr>
+    <th>Drink Name</th>
+    <th>Drink Picture</th>
+    <th>Is Alcoholic</th>
+</tr>
+{% for r in result %}
+<tr>
+  <td>{{ r[0] }}</td>
+  <td><img src="{{ r[1] }}" border=3 height=100 width=100 alt="cocktail" class ="center"></img></td>
+  <td>{{ r[2] }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</htlm>
