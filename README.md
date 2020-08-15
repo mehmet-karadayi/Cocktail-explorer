@@ -1,4 +1,4 @@
-# Assignment 9
+# Cocktail Explorer
 
 This repo contains the source code of Cocktail Explorer web app.
 
